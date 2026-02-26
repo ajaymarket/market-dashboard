@@ -286,9 +286,18 @@ def extract_metrics(df, sym):
 # ── FEAR & GREED ──────────────────────────────────────────────────────────────────────────────────
 def fetch_fear_greed():
     """Fetch CNN Fear & Greed Index score and rating."""
+    urls = [
+        "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+        "https://fear-and-greed-index.p.rapidapi.com/v1/fgi",  # fallback (may 401)
+    ]
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Accept': 'application/json',
+        'Referer': 'https://edition.cnn.com/',
+    }
     try:
-        url = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
-        r = requests.get(url, timeout=10, headers={'User-Agent': 'Mozilla/5.0'})
+        r = requests.get(urls[0], timeout=15, headers=headers)
+        print(f"  Fear & Greed HTTP {r.status_code}")
         r.raise_for_status()
         data = r.json()
         fg = data.get('fear_and_greed', {})
@@ -305,7 +314,7 @@ def fetch_naaim():
     """Scrape NAAIM Exposure Index — latest weekly reading."""
     try:
         url = "https://www.naaim.org/programs/naaim-exposure-index/"
-        tables = pd.read_html(url)
+        tables = pd.read_html(url, flavor='html5lib')
         if not tables:
             raise ValueError("No tables found on NAAIM page")
         df = tables[0]
@@ -339,7 +348,7 @@ def compute_sp500_breadth():
     try:
         # Get S&P 500 component list from Wikipedia
         print("  Fetching S&P 500 component list...")
-        sp_df = pd.read_html('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')[0]
+        sp_df = pd.read_html('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies', flavor='html5lib')[0]
         tickers = [t.replace('.', '-') for t in sp_df['Symbol'].tolist()]
         print(f"  Downloading {len(tickers)} tickers (1 year of daily closes)...")
         raw = yf.download(tickers, period='1y', interval='1d',
