@@ -12,7 +12,7 @@
   --bg:      #07090d;
   --bg2:     #0c0f15;
   --bg3:     #111520;
-  --bg4:     #161b26;h
+  --bg4:     #161b26;
   --border:  #1c2535;
   --border2: #243044;
   --accent:  #00c8ff;
@@ -213,7 +213,6 @@ td:first-child,td.l{text-align:left}
 <div class="toast" id="toast"></div>
 <div class="wrap" id="root">
 
-<!-- ══ HEADER ══════════════════════════════════════════ -->
 <div class="hdr">
   <div class="hdr-l">
     <div class="logo">Market Command Centre</div>
@@ -221,14 +220,13 @@ td:first-child,td.l{text-align:left}
       <div id="hdr-date" style="letter-spacing:1px">—</div>
       <strong id="hdr-time">—</strong>
     </div>
-    <div class="live"><span class="dot"></span>HKT LIVE</div>
+    <div class="live"><span class="dot"></span>IST LIVE</div>
   </div>
   <div class="hdr-r">
     <span id="lastUpdatedBadge" style="font-size:9px;color:var(--text3);letter-spacing:1px;padding:4px 8px;background:var(--bg3);border:1px solid var(--border);border-radius:2px">LOADING DATA...</span>
       </div>
 </div>
 
-<!-- ══ QUOTE BANNER ═════════════════════════════════════ -->
 <div class="quote-bar">
   <div class="quote-icon">✦</div>
   <div class="quote-text">"If you Fail to Plan, You are Planning to Fail"</div>
@@ -236,16 +234,12 @@ td:first-child,td.l{text-align:left}
   <div class="quote-icon">✦</div>
 </div>
 
-<!-- ══ DATA STATUS BAR ═══════════════════════════════════ -->
 <div class="api-bar" id="dataStatusBar">
   ⬤ &nbsp;
   <span id="dataStatus" style="color:var(--text2)">Loading market data...</span>
-  <span id="dataAge" style="color:var(--text3);font-size:9px;margin-left:auto">Auto-refreshed daily 06:00 HKT via GitHub Actions · Yahoo Finance</span>
+  <span id="dataAge" style="color:var(--text3);font-size:9px;margin-left:auto">Auto-refreshed daily 03:30 IST via GitHub Actions · Yahoo Finance</span>
 </div>
 
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- SECTION 1: MACRO OVERVIEW                             -->
-<!-- ══════════════════════════════════════════════════════ -->
 <div class="sec" id="s1">
   <div class="sec-hdr">
     <div class="sec-n">01</div>
@@ -253,7 +247,6 @@ td:first-child,td.l{text-align:left}
     <div class="sec-sub">EOD SNAPSHOT · PREV CLOSE · RANKED BY CATEGORY</div>
   </div>
 
-  <!-- Futures + DXY/VIX -->
   <div class="mg">
     <div class="card">
       <div class="card-lbl">▸ US Index Futures</div>
@@ -267,14 +260,12 @@ td:first-child,td.l{text-align:left}
     </div>
   </div>
 
-  <!-- Crypto -->
   <div class="card" style="margin-bottom:9px">
     <div class="card-lbl">▸ Crypto</div>
     <table><thead><tr><th class="l">Asset</th><th>Price (USD)</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th><th>5D</th></tr></thead>
     <tbody id="t-crypto"><tr><td colspan="7" class="loading">Loading...</td></tr></tbody></table>
   </div>
 
-  <!-- Metals + Commodities -->
   <div class="mg">
     <div class="card">
       <div class="card-lbl">▸ Precious & Base Metals</div>
@@ -288,7 +279,6 @@ td:first-child,td.l{text-align:left}
     </div>
   </div>
 
-  <!-- Yields + Global -->
   <div class="mg">
     <div class="card">
       <div class="card-lbl">▸ US Treasury Yields</div>
@@ -305,9 +295,6 @@ td:first-child,td.l{text-align:left}
 
 <div class="divider"></div>
 
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- SECTION 2: EQUITIES OVERVIEW                          -->
-<!-- ══════════════════════════════════════════════════════ -->
 <div class="sec" id="s2">
   <div class="sec-hdr">
     <div class="sec-n">02</div>
@@ -315,21 +302,18 @@ td:first-child,td.l{text-align:left}
     <div class="sec-sub">RANKED BY 1W PERFORMANCE</div>
   </div>
 
-  <!-- Major ETF stats -->
   <div class="card" style="margin-bottom:9px">
     <div class="card-lbl">▸ Major ETF Stats</div>
     <table><thead><tr><th class="l">ETF</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th><th>5D</th></tr></thead>
     <tbody id="t-etfmain"><tr><td colspan="7" class="loading">Loading...</td></tr></tbody></table>
   </div>
 
-  <!-- Sub-market -->
   <div class="card" style="margin-bottom:9px">
     <div class="card-lbl">▸ S&P 500 Sub-Market Performance — Ranked by 1W</div>
     <table><thead><tr><th class="l">#</th><th class="l">Sub-Market / ETF</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th><th>5D</th></tr></thead>
     <tbody id="t-submarket"><tr><td colspan="8" class="loading">Loading...</td></tr></tbody></table>
   </div>
 
-  <!-- Sectors side by side -->
   <div class="g2" style="margin-bottom:9px">
     <div class="card">
       <div class="card-lbl">▸ S&P 500 Sub-Sector — Ranked by 1W</div>
@@ -343,14 +327,12 @@ td:first-child,td.l{text-align:left}
     </div>
   </div>
 
-  <!-- Thematic Top 10 -->
   <div class="card" style="margin-bottom:9px">
     <div class="card-lbl">▸ Top 10 Thematic Sectors — Ranked by 1W (Holdings expandable ▸)</div>
     <table><thead><tr><th class="l">#</th><th class="l">Theme / ETF</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th><th>5D</th><th class="l">Holdings</th></tr></thead>
     <tbody id="t-thematic"><tr><td colspan="9" class="loading">Loading...</td></tr></tbody></table>
   </div>
 
-  <!-- Country ETFs -->
   <div class="card">
     <div class="card-lbl">▸ Country ETFs — Top 10 by 1W Performance (Holdings expandable ▸)</div>
     <table><thead><tr><th class="l">#</th><th class="l">Country / ETF</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th><th>5D</th><th class="l">Holdings</th></tr></thead>
@@ -360,10 +342,6 @@ td:first-child,td.l{text-align:left}
 
 <div class="divider"></div>
 
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- SECTION 3: MARKET BREADTH & SENTIMENT                 -->
-<!-- ══════════════════════════════════════════════════════ -->
 <div class="sec" id="s-breadth">
   <div class="sec-hdr">
     <div class="sec-n">03</div>
@@ -380,8 +358,6 @@ td:first-child,td.l{text-align:left}
 
 <div class="divider"></div>
 
-<!-- SECTION 4: POSITION SIZING                            -->
-<!-- ══════════════════════════════════════════════════════ -->
 <div class="sec" id="s4">
   <div class="sec-hdr">
     <div class="sec-n">04</div>
@@ -389,7 +365,6 @@ td:first-child,td.l{text-align:left}
     <div class="sec-sub">RISK-BASED · STAGGERED STOPS</div>
   </div>
   <div class="calc-wrap">
-    <!-- Inputs -->
     <div class="cpanel">
       <div class="c-ttl">▸ Trade Parameters</div>
       <div class="dir-tog">
@@ -420,7 +395,6 @@ td:first-child,td.l{text-align:left}
       </div>
     </div>
 
-    <!-- Stops -->
     <div class="stops-panel">
       <div class="stops-hdr">
         <span style="font-size:9px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-right:auto">▸ Staggered Stop Levels</span>
@@ -434,7 +408,6 @@ td:first-child,td.l{text-align:left}
           <div class="viz-note">Scale-Out Visualization</div>
           <div class="scale-viz" id="scaleViz"></div>
         </div>
-        <!-- Risk/Reward helper -->
         <div style="margin-top:22px;padding-top:12px;border-top:1px solid var(--border)">
           <div class="viz-note" style="margin-bottom:8px">R:R Targets</div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px" id="rrTargets"></div>
@@ -444,9 +417,7 @@ td:first-child,td.l{text-align:left}
   </div>
 </div>
 
-</div><!-- /wrap -->
-<!-- ══ TRADINGVIEW CHART MODAL ════════════════════ -->
-<div id="tv-modal" onclick="if(event.target===this)closeChart()">
+</div><div id="tv-modal" onclick="if(event.target===this)closeChart()">
   <div id="tv-modal-box">
     <div id="tv-modal-hdr">
       <div id="tv-modal-title">—</div>
@@ -482,13 +453,13 @@ const FINNHUB_SYMBOLS = {
 
 const META = {
   // Futures
-  'ES1!':   { name:'S&P 500 Futures',     sym:'ES1!' },
+  'ES1!':   { name:'S&P 500 Futures',      sym:'ES1!' },
   'NQ1!':   { name:'Nasdaq Futures',       sym:'NQ1!' },
   'RTY1!':  { name:'Russell 2000 Futures', sym:'RTY1!' },
   'YM1!':   { name:'Dow Jones Futures',    sym:'YM1!' },
   // DX/VIX
-  'DX-Y.NYB':{ name:'US Dollar Index',    sym:'DXY' },
-  'CBOE:VIX':{ name:'CBOE VIX',           sym:'VIX' },
+  'DX-Y.NYB':{ name:'US Dollar Index',     sym:'DXY' },
+  'CBOE:VIX':{ name:'CBOE VIX',            sym:'VIX' },
   // Metals
   'GC1!':   { name:'Gold',       sym:'GC1!', unit:'$/oz' },
   'SI1!':   { name:'Silver',     sym:'SI1!', unit:'$/oz' },
@@ -512,94 +483,94 @@ const META = {
   '^HSI':   { name:'Hang Seng',       sym:'HSI' },
   '^FTSE':  { name:'FTSE 100',        sym:'UKX' },
   '^FCHI':  { name:'CAC 40',          sym:'CAC' },
-  '^GDAXI': { name:'DAX',             sym:'DAX' },
+  '^GDAXI': { name:'DAX',              sym:'DAX' },
   // ETFs
-  'SPY':    { name:'SPDR S&P 500',       sym:'SPY' },
-  'QQQ':    { name:'Invesco QQQ',        sym:'QQQ' },
-  'DIA':    { name:'SPDR Dow Jones',     sym:'DIA' },
-  'IWM':    { name:'iShares Russell 2000',sym:'IWM' },
+  'SPY':     { name:'SPDR S&P 500',       sym:'SPY' },
+  'QQQ':     { name:'Invesco QQQ',        sym:'QQQ' },
+  'DIA':     { name:'SPDR Dow Jones',     sym:'DIA' },
+  'IWM':     { name:'iShares Russell 2000',sym:'IWM' },
   // Sub-market
-  'IVW':    { name:'iSh S&P 500 Growth', sym:'IVW' },
-  'IVE':    { name:'iSh S&P 500 Value',  sym:'IVE' },
-  'IJK':    { name:'iSh S&P 400 MidCap Growth',sym:'IJK' },
-  'IJJ':    { name:'iSh S&P 400 MidCap Value', sym:'IJJ' },
-  'IJT':    { name:'iSh S&P 600 SmCap Growth', sym:'IJT' },
-  'IJS':    { name:'iSh S&P 600 SmCap Value',  sym:'IJS' },
-  'MGK':    { name:'Vanguard Mega Cap Growth',  sym:'MGK' },
-  'VUG':    { name:'Vanguard Growth',    sym:'VUG' },
-  'VTV':    { name:'Vanguard Value',     sym:'VTV' },
+  'IVW':     { name:'iSh S&P 500 Growth', sym:'IVW' },
+  'IVE':     { name:'iSh S&P 500 Value',  sym:'IVE' },
+  'IJK':     { name:'iSh S&P 400 MidCap Growth',sym:'IJK' },
+  'IJJ':     { name:'iSh S&P 400 MidCap Value', sym:'IJJ' },
+  'IJT':     { name:'iSh S&P 600 SmCap Growth', sym:'IJT' },
+  'IJS':     { name:'iSh S&P 600 SmCap Value',  sym:'IJS' },
+  'MGK':     { name:'Vanguard Mega Cap Growth',  sym:'MGK' },
+  'VUG':     { name:'Vanguard Growth',    sym:'VUG' },
+  'VTV':     { name:'Vanguard Value',     sym:'VTV' },
   // Sectors
-  'XLK':    { name:'Technology',         sym:'XLK' },
-  'XLV':    { name:'Health Care',        sym:'XLV' },
-  'XLF':    { name:'Financials',         sym:'XLF' },
-  'XLE':    { name:'Energy',             sym:'XLE' },
-  'XLY':    { name:'Consumer Discret.', sym:'XLY' },
-  'XLI':    { name:'Industrials',        sym:'XLI' },
-  'XLB':    { name:'Materials',          sym:'XLB' },
-  'XLU':    { name:'Utilities',          sym:'XLU' },
-  'XLRE':   { name:'Real Estate',        sym:'XLRE' },
-  'XLC':    { name:'Comm. Services',     sym:'XLC' },
-  'XLP':    { name:'Consumer Staples',   sym:'XLP' },
+  'XLK':     { name:'Technology',          sym:'XLK' },
+  'XLV':     { name:'Health Care',         sym:'XLV' },
+  'XLF':     { name:'Financials',          sym:'XLF' },
+  'XLE':     { name:'Energy',              sym:'XLE' },
+  'XLY':     { name:'Consumer Discret.', sym:'XLY' },
+  'XLI':     { name:'Industrials',         sym:'XLI' },
+  'XLB':     { name:'Materials',           sym:'XLB' },
+  'XLU':     { name:'Utilities',           sym:'XLU' },
+  'XLRE':    { name:'Real Estate',         sym:'XLRE' },
+  'XLC':     { name:'Comm. Services',      sym:'XLC' },
+  'XLP':     { name:'Consumer Staples',    sym:'XLP' },
   // EW Sectors
-  'RYT':    { name:'EW Technology',      sym:'RYT' },
-  'RYH':    { name:'EW Health Care',     sym:'RYH' },
-  'RYF':    { name:'EW Financials',      sym:'RYF' },
-  'RYE':    { name:'EW Energy',          sym:'RYE' },
-  'RCD':    { name:'EW Consumer Disc.',  sym:'RCD' },
-  'RGI':    { name:'EW Industrials',     sym:'RGI' },
-  'RTM':    { name:'EW Materials',       sym:'RTM' },
-  'RYU':    { name:'EW Utilities',       sym:'RYU' },
-  'EWRE':   { name:'EW Real Estate',     sym:'EWRE' },
-  'EWCO':   { name:'EW Comm. Services',  sym:'EWCO' },
-  'RHS':    { name:'EW Consumer Stap.',  sym:'RHS' },
+  'RYT':     { name:'EW Technology',      sym:'RYT' },
+  'RYH':     { name:'EW Health Care',     sym:'RYH' },
+  'RYF':     { name:'EW Financials',      sym:'RYF' },
+  'RYE':     { name:'EW Energy',          sym:'RYE' },
+  'RCD':     { name:'EW Consumer Disc.',  sym:'RCD' },
+  'RGI':     { name:'EW Industrials',     sym:'RGI' },
+  'RTM':     { name:'EW Materials',        sym:'RTM' },
+  'RYU':     { name:'EW Utilities',        sym:'RYU' },
+  'EWRE':    { name:'EW Real Estate',      sym:'EWRE' },
+  'EWCO':    { name:'EW Comm. Services',  sym:'EWCO' },
+  'RHS':     { name:'EW Consumer Stap.',  sym:'RHS' },
   // Thematic
-  'BOTZ':   { name:'Global X AI & Robotics',  sym:'BOTZ' },
-  'HACK':   { name:'ETFMG Prime Cybersecurity',sym:'HACK' },
-  'SOXX':   { name:'iSh Semiconductor',        sym:'SOXX' },
-  'ICLN':   { name:'iSh Global Clean Energy',  sym:'ICLN' },
-  'SKYY':   { name:'First Trust Cloud Computing',sym:'SKYY' },
-  'XBI':    { name:'SPDR Biotech',             sym:'XBI' },
-  'ITA':    { name:'iSh Aerospace & Defense',  sym:'ITA' },
-  'FINX':   { name:'Global X FinTech',         sym:'FINX' },
-  'ARKG':   { name:'ARK Genomic Revolution',   sym:'ARKG' },
-  'URA':    { name:'Global X Uranium',          sym:'URA' },
-  'AIQ':    { name:'Global X AI & Technology', sym:'AIQ' },
-  'CIBR':   { name:'First Trust Cybersecurity', sym:'CIBR' },
-  'ROBO':   { name:'ROBO Global Robotics',      sym:'ROBO' },
-  'ARKK':   { name:'ARK Innovation',            sym:'ARKK' },
-  'DRIV':   { name:'Global X Autonomous & EV',  sym:'DRIV' },
-  'OGIG':   { name:'O\'Shares Global Internet', sym:'OGIG' },
-  'ACES':   { name:'ALPS Clean Energy',          sym:'ACES' },
-  'PAVE':   { name:'Global X U.S. Infrastructure',sym:'PAVE' },
-  'HERO':   { name:'Global X Video Games & Esports',sym:'HERO' },
-  'CLOU':   { name:'Global X Cloud Computing',  sym:'CLOU' },
+  'BOTZ':    { name:'Global X AI & Robotics',  sym:'BOTZ' },
+  'HACK':    { name:'ETFMG Prime Cybersecurity',sym:'HACK' },
+  'SOXX':    { name:'iSh Semiconductor',        sym:'SOXX' },
+  'ICLN':    { name:'iSh Global Clean Energy',  sym:'ICLN' },
+  'SKYY':    { name:'First Trust Cloud Computing',sym:'SKYY' },
+  'XBI':     { name:'SPDR Biotech',              sym:'XBI' },
+  'ITA':     { name:'iSh Aerospace & Defense',  sym:'ITA' },
+  'FINX':    { name:'Global X FinTech',          sym:'FINX' },
+  'ARKG':    { name:'ARK Genomic Revolution',   sym:'ARKG' },
+  'URA':     { name:'Global X Uranium',          sym:'URA' },
+  'AIQ':     { name:'Global X AI & Technology', sym:'AIQ' },
+  'CIBR':    { name:'First Trust Cybersecurity', sym:'CIBR' },
+  'ROBO':    { name:'ROBO Global Robotics',      sym:'ROBO' },
+  'ARKK':    { name:'ARK Innovation',            sym:'ARKK' },
+  'DRIV':    { name:'Global X Autonomous & EV',  sym:'DRIV' },
+  'OGIG':    { name:'O\'Shares Global Internet', sym:'OGIG' },
+  'ACES':    { name:'ALPS Clean Energy',          sym:'ACES' },
+  'PAVE':    { name:'Global X U.S. Infrastructure',sym:'PAVE' },
+  'HERO':    { name:'Global X Video Games & Esports',sym:'HERO' },
+  'CLOU':    { name:'Global X Cloud Computing',  sym:'CLOU' },
   // Country ETFs
-  'EWJ':    { name:'Japan',          sym:'EWJ',  flag:'🇯🇵' },
-  'EWY':    { name:'South Korea',    sym:'EWY',  flag:'🇰🇷' },
-  'INDA':   { name:'India',          sym:'INDA', flag:'🇮🇳' },
-  'MCHI':   { name:'China Large Cap',sym:'MCHI', flag:'🇨🇳' },
-  'GXC':    { name:'China S&P ETF',  sym:'GXC',  flag:'🇨🇳' },
-  'EWH':    { name:'Hong Kong',      sym:'EWH',  flag:'🇭🇰' },
-  'EWU':    { name:'United Kingdom', sym:'EWU',  flag:'🇬🇧' },
-  'EWQ':    { name:'France',         sym:'EWQ',  flag:'🇫🇷' },
-  'EWG':    { name:'Germany',        sym:'EWG',  flag:'🇩🇪' },
-  'EWZ':    { name:'Brazil',         sym:'EWZ',  flag:'🇧🇷' },
-  'EWT':    { name:'Taiwan',         sym:'EWT',  flag:'🇹🇼' },
-  'EWA':    { name:'Australia',      sym:'EWA',  flag:'🇦🇺' },
-  'EWC':    { name:'Canada',         sym:'EWC',  flag:'🇨🇦' },
-  'EWL':    { name:'Switzerland',    sym:'EWL',  flag:'🇨🇭' },
-  'EWP':    { name:'Spain',          sym:'EWP',  flag:'🇪🇸' },
-  'EWS':    { name:'Singapore',      sym:'EWS',  flag:'🇸🇬' },
-  'TUR':    { name:'Turkey',         sym:'TUR',  flag:'🇹🇷' },
-  'EWM':    { name:'Malaysia',       sym:'EWM',  flag:'🇲🇾' },
-  'EPHE':   { name:'Philippines',    sym:'EPHE', flag:'🇵🇭' },
-  'THD':    { name:'Thailand',       sym:'THD',  flag:'🇹🇭' },
-  'VNM':    { name:'Vietnam',        sym:'VNM',  flag:'🇻🇳' },
-  'EWI':    { name:'Italy',          sym:'EWI',  flag:'🇮🇹' },
-  'EWN':    { name:'Netherlands',    sym:'EWN',  flag:'🇳🇱' },
-  'EWD':    { name:'Sweden',         sym:'EWD',  flag:'🇸🇪' },
-  'EWK':    { name:'Belgium',        sym:'EWK',  flag:'🇧🇪' },
-  'EWO':    { name:'Austria',        sym:'EWO',  flag:'🇦🇹' },
+  'EWJ':     { name:'Japan',           sym:'EWJ',  flag:'🇯🇵' },
+  'EWY':     { name:'South Korea',     sym:'EWY',  flag:'🇰🇷' },
+  'INDA':    { name:'India',           sym:'INDA', flag:'🇮🇳' },
+  'MCHI':    { name:'China Large Cap', sym:'MCHI', flag:'🇨🇳' },
+  'GXC':     { name:'China S&P ETF',   sym:'GXC',  flag:'🇨🇳' },
+  'EWH':     { name:'Hong Kong',       sym:'EWH',  flag:'🇭🇰' },
+  'EWU':     { name:'United Kingdom',  sym:'EWU',  flag:'🇬🇧' },
+  'EWQ':     { name:'France',          sym:'EWQ',  flag:'🇫🇷' },
+  'EWG':     { name:'Germany',         sym:'EWG',  flag:'🇩🇪' },
+  'EWZ':     { name:'Brazil',          sym:'EWZ',  flag:'🇧🇷' },
+  'EWT':     { name:'Taiwan',          sym:'EWT',  flag:'🇹🇼' },
+  'EWA':     { name:'Australia',       sym:'EWA',  flag:'🇦🇺' },
+  'EWC':     { name:'Canada',          sym:'EWC',  flag:'🇨🇦' },
+  'EWL':     { name:'Switzerland',     sym:'EWL',  flag:'🇨🇭' },
+  'EWP':     { name:'Spain',           sym:'EWP',  flag:'🇪🇸' },
+  'EWS':     { name:'Singapore',       sym:'EWS',  flag:'🇸🇬' },
+  'TUR':     { name:'Turkey',          sym:'TUR',  flag:'🇹🇷' },
+  'EWM':     { name:'Malaysia',        sym:'EWM',  flag:'🇲🇾' },
+  'EPHE':    { name:'Philippines',     sym:'EPHE', flag:'🇵🇭' },
+  'THD':     { name:'Thailand',        sym:'THD',  flag:'🇹🇭' },
+  'VNM':     { name:'Vietnam',         sym:'VNM',  flag:'🇻🇳' },
+  'EWI':     { name:'Italy',           sym:'EWI',  flag:'🇮🇹' },
+  'EWN':     { name:'Netherlands',     sym:'EWN',  flag:'🇳🇱' },
+  'EWD':     { name:'Sweden',          sym:'EWD',  flag:'🇸🇪' },
+  'EWK':     { name:'Belgium',         sym:'EWK',  flag:'🇧🇪' },
+  'EWO':     { name:'Austria',         sym:'EWO',  flag:'🇦🇹' },
 };
 
 // Top holdings (curated reference data)
@@ -776,17 +747,17 @@ const CRYPTO_DEMO = [
 let DIR = 'long', STOPS = 2;
 
 // ═══════════════════════════════════════════════════════
-// CLOCK
+// CLOCK (MODIFIED TO IST)
 // ═══════════════════════════════════════════════════════
 function tick() {
   const now = new Date();
-  const hkt = new Date(now.toLocaleString('en-US',{timeZone:'Asia/Hong_Kong'}));
+  const ist = new Date(now.toLocaleString('en-US',{timeZone:'Asia/Kolkata'}));
   const D=['SUN','MON','TUE','WED','THU','FRI','SAT'];
   const M=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-  document.getElementById('hdr-date').textContent=`${D[hkt.getDay()]} · ${hkt.getDate()} ${M[hkt.getMonth()]} ${hkt.getFullYear()}`;
-  const h=String(hkt.getHours()).padStart(2,'0');
-  const m=String(hkt.getMinutes()).padStart(2,'0');
-  const s=String(hkt.getSeconds()).padStart(2,'0');
+  document.getElementById('hdr-date').textContent=`${D[ist.getDay()]} · ${ist.getDate()} ${M[ist.getMonth()]} ${ist.getFullYear()}`;
+  const h=String(ist.getHours()).padStart(2,'0');
+  const m=String(ist.getMinutes()).padStart(2,'0');
+  const s=String(ist.getSeconds()).padStart(2,'0');
   document.getElementById('hdr-time').textContent=`${h}:${m}:${s}`;
 }
 setInterval(tick,1000); tick();
@@ -927,7 +898,7 @@ function toggleH(id,sym){
 }
 
 // ═══════════════════════════════════════════════════════
-// LIVE DATA — loaded from data/data.json (built by GitHub Actions)
+// LIVE DATA (MODIFIED TO IST)
 // ═══════════════════════════════════════════════════════
 let DATA = null;
 
@@ -965,37 +936,35 @@ function renderAll(d) {
     tr.appendChild(sd);cb.appendChild(tr);
   });
 
-  // Update freshness badge
+  // Update freshness badge to IST
   if(d.generated_at){
     const dt=new Date(d.generated_at);
-    const hkt=new Date(dt.toLocaleString('en-US',{timeZone:'Asia/Hong_Kong'}));
+    const ist = new Date(dt.toLocaleString('en-US',{timeZone:'Asia/Kolkata'}));
     const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    const label=`DATA: ${hkt.getDate()} ${M[hkt.getMonth()]} ${hkt.getFullYear()} · ${String(hkt.getHours()).padStart(2,'0')}:${String(hkt.getMinutes()).padStart(2,'0')} HKT`;
+    const label=`DATA: ${ist.getDate()} ${M[ist.getMonth()]} ${ist.getFullYear()} · ${String(ist.getHours()).padStart(2,'0')}:${String(ist.getMinutes()).padStart(2,'0')} IST`;
     document.getElementById('lastUpdatedBadge').textContent=label;
     document.getElementById('lastUpdatedBadge').style.color='var(--green)';
     document.getElementById('dataStatus').textContent='✓ Market data loaded — EOD prices';
     document.getElementById('dataStatus').style.color='var(--green)';
 
-    // How stale?
+    // Age calculation
     const ageHrs=Math.round((Date.now()-dt.getTime())/3600000);
-    document.getElementById('dataAge').textContent=`Updated ${ageHrs}h ago · Auto-refreshes daily 06:00 HKT · Yahoo Finance (no API key)`;
+    document.getElementById('dataAge').textContent=`Updated ${ageHrs}h ago · Auto-refreshes daily 03:30 IST · Yahoo Finance (no API key)`;
   }
 }
 
 async function loadData(){
   try {
-    // Try live data.json first (works on GitHub Pages)
     const resp = await fetch('data/data.json?_='+Date.now());
     if(!resp.ok) throw new Error('No data.json yet');
     DATA = await resp.json();
     renderAll(DATA);
   } catch(e) {
-    // Fallback: render DEMO data with a warning banner
     console.warn('data/data.json not found, showing demo data:', e.message);
     DATA = DEMO;
     DATA.crypto = CRYPTO_DEMO;
     renderAll(DATA);
-    document.getElementById('dataStatus').textContent='⚠ Demo data shown — data/data.json not yet generated (run GitHub Action first)';
+    document.getElementById('dataStatus').textContent='⚠ Demo data shown — data/data.json not yet generated';
     document.getElementById('dataStatus').style.color='var(--amber)';
     document.getElementById('lastUpdatedBadge').textContent='DEMO DATA';
     document.getElementById('lastUpdatedBadge').style.color='var(--amber)';
@@ -1152,13 +1121,13 @@ function renderBreadth(d) {
   const netStr = n => (n >= 0 ? '▲ +' : '▼ ') + fmt(Math.abs(n)) + ' net';
 
   const cards = [
-    { lbl:'Fear & Greed',   val:fgScore.toFixed(0),     sub:fgRating.toUpperCase(), col:fgCol,    note:'CNN Index · 0=Extreme Fear, 100=Extreme Greed' },
+    { lbl:'Fear & Greed',    val:fgScore.toFixed(0),      sub:fgRating.toUpperCase(), col:fgCol,    note:'CNN Index · 0=Extreme Fear, 100=Extreme Greed' },
     { lbl:'NAAIM Exposure', val:nmVal.toFixed(0)+'%',   sub:nmLbl,                  col:nmCol,    note:'Active mgr equity exposure · ' + (nm.date || 'weekly') },
-    { lbl:'Advancers',      val:fmt(adv),               sub:netStr(adNet),           col:adCol,    note:'vs ' + fmt(dec) + ' decliners · session' },
-    { lbl:'New Highs',      val:fmt(nH),                sub:netStr(hlNet),           col:hlCol,    note:'vs ' + fmt(nL) + ' new lows · 52-wk' },
-    { lbl:'% > SMA 20', val:p20.toFixed(1)+'%',  sub:pLbl(p20),              col:pCol(p20), note:'S&P 500 stocks above 20-day MA' },
-    { lbl:'% > SMA 50', val:p50.toFixed(1)+'%',  sub:pLbl(p50),              col:pCol(p50), note:'S&P 500 stocks above 50-day MA' },
-    { lbl:'% > SMA 200',    val:p200.toFixed(1)+'%',   sub:pLbl(p200),             col:pCol(p200),note:'S&P 500 stocks above 200-day MA' },
+    { lbl:'Advancers',      val:fmt(adv),                sub:netStr(adNet),           col:adCol,    note:'vs ' + fmt(dec) + ' decliners · session' },
+    { lbl:'New Highs',      val:fmt(nH),                 sub:netStr(hlNet),           col:hlCol,    note:'vs ' + fmt(nL) + ' new lows · 52-wk' },
+    { lbl:'% > SMA 20', val:p20.toFixed(1)+'%',  sub:pLbl(p20),              col:pCol(p20), note:'S&P 500 stocks above 20-day MA' },
+    { lbl:'% > SMA 50', val:p50.toFixed(1)+'%',  sub:pLbl(p50),              col:pCol(p50), note:'S&P 500 stocks above 50-day MA' },
+    { lbl:'% > SMA 200',    val:p200.toFixed(1)+'%',   sub:pLbl(p200),              col:pCol(p200),note:'S&P 500 stocks above 200-day MA' },
   ];
 
   cards.forEach(c => {
@@ -1168,7 +1137,7 @@ function renderBreadth(d) {
       '<div style="font-size:8.5px;color:var(--text3);letter-spacing:1.2px;text-transform:uppercase">'   + c.lbl + '</div>'
     + '<div style="font-size:20px;font-weight:700;color:' + c.col + ';font-family:var(--mono);line-height:1.1">' + c.val + '</div>'
     + '<div style="font-size:8.5px;color:' + c.col + ';letter-spacing:0.5px;font-weight:500">'            + c.sub + '</div>'
-    + '<div style="font-size:7.5px;color:var(--text3);line-height:1.3">'                                  + c.note + '</div>';
+    + '<div style="font-size:7.5px;color:var(--text3);line-height:1.3">'                                   + c.note + '</div>';
     grid.appendChild(el);
   });
 }
@@ -1214,22 +1183,21 @@ function calc(){
   document.getElementById('rPts').textContent='$'+rPts.toFixed(2);
   document.getElementById('rEq').textContent=pctEq.toFixed(1)+'%';
 
-  // Build staggered stops (shares = qty to REMOVE at level; pct = % remaining)
   const levels=[];
   if(STOPS===2){
     const mid=(en+st)/2;
     const s1=Math.floor(shares/2), s2=shares-Math.floor(shares/2);
-    levels.push({lbl:'Entry',       price:en,  shares:0,  pct:100,                       pnl:0,              cls:'sr-entry'});
+    levels.push({lbl:'Entry',       price:en,  shares:0,  pct:100,                        pnl:0,              cls:'sr-entry'});
     levels.push({lbl:'Stop 1 (mid)',price:mid, shares:s1, pct:Math.round(s2/shares*100), pnl:-Math.abs(en-mid)*s1, cls:'sr-mid'});
-    levels.push({lbl:'Final Stop',  price:st,  shares:s2, pct:0,                         pnl:-rPts*s2,       cls:'sr-fin'});
+    levels.push({lbl:'Final Stop',  price:st,  shares:s2, pct:0,                          pnl:-rPts*s2,       cls:'sr-fin'});
   } else {
     const gap=rPts/3, dDir=DIR==='long'?-1:1;
     const s1=Math.floor(shares/3), s2=Math.floor(shares/3), s3=shares-Math.floor(shares/3)-Math.floor(shares/3);
     const p1=en+gap*dDir, p2=en+gap*2*dDir;
-    levels.push({lbl:'Entry',       price:en, shares:0,  pct:100,                              pnl:0,          cls:'sr-entry'});
-    levels.push({lbl:'Stop 1 (⅓)', price:p1, shares:s1, pct:Math.round((shares-s1)/shares*100), pnl:-(gap*s1),    cls:'sr-mid'});
-    levels.push({lbl:'Stop 2 (⅔)', price:p2, shares:s2, pct:Math.round(s3/shares*100),         pnl:-(gap*2*s2),  cls:'sr-mid'});
-    levels.push({lbl:'Final Stop',  price:st, shares:s3, pct:0,                                pnl:-(rPts*s3),   cls:'sr-fin'});
+    levels.push({lbl:'Entry',       price:en, shares:0,  pct:100,                               pnl:0,           cls:'sr-entry'});
+    levels.push({lbl:'Stop 1 (⅓)', price:p1, shares:s1, pct:Math.round((shares-s1)/shares*100), pnl:-(gap*s1),     cls:'sr-mid'});
+    levels.push({lbl:'Stop 2 (⅔)', price:p2, shares:s2, pct:Math.round(s3/shares*100),          pnl:-(gap*2*s2),   cls:'sr-mid'});
+    levels.push({lbl:'Final Stop',  price:st, shares:s3, pct:0,                                 pnl:-(rPts*s3),    cls:'sr-fin'});
   }
 
   const rows=document.getElementById('srRows');rows.innerHTML='';
@@ -1244,7 +1212,6 @@ function calc(){
     rows.appendChild(d);
   });
 
-  // Visualization
   const viz=document.getElementById('scaleViz');viz.innerHTML='';
   const mn=Math.min(en,st)*0.9985,mx=Math.max(en,st)*1.0015,rng=mx-mn;
   const bar=document.createElement('div');
@@ -1259,7 +1226,6 @@ function calc(){
     lbl.textContent='$'+fp(lv.price);viz.appendChild(lbl);
   });
 
-  // R:R targets
   const rr=document.getElementById('rrTargets');rr.innerHTML='';
   [1,1.5,2,3,4,5].forEach(r=>{
     const tgt=DIR==='long'?en+rPts*r:en-rPts*r;
@@ -1273,9 +1239,6 @@ function calc(){
   });
 }
 
-// ═══════════════════════════════════════════════════════
-// SNAPSHOT + SHARE
-// ═══════════════════════════════════════════════════════
 function captureSnap(){
   const fl=document.getElementById('snapFlash');
   fl.classList.add('on');setTimeout(()=>fl.classList.remove('on'),150);
@@ -1380,7 +1343,7 @@ renderAll = function(d) {
 if (typeof DATA !== 'undefined' && DATA && DATA.generated_at) renderAll(DATA);
 </script>
 <script>
-// ── SHARE BUTTON OVERRIDE ────────────────────────────────────────────────────
+// ── SHARE BUTTON OVERRIDE (MODIFIED TO en-IN) ────────────────────────────────
 shareX = function() {
   var target = document.querySelector('.wrap') || document.body;
   showToast('📸 Capturing screenshot…', 8000);
@@ -1395,7 +1358,7 @@ shareX = function() {
   }).then(function(canvas) {
     canvas.toBlob(function(blob) {
       var tweetUrl = 'https://twitter.com/intent/tweet?text=' +
-        encodeURIComponent('Market Dashboard — ' + new Date().toLocaleDateString('en-HK',{day:'2-digit',month:'short',year:'numeric'}) + ' #markets #trading');
+        encodeURIComponent('Market Dashboard — ' + new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}) + ' #markets #trading');
       if (navigator.clipboard && navigator.clipboard.write) {
         navigator.clipboard.write([new ClipboardItem({'image/png': blob})])
           .then(function() {
